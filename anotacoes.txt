@@ -1,0 +1,213 @@
+npm i typescript ts-node ts-node-dev @types/node
+
+ou 
+
+npm i typescript ts-node ts-node-dev @types/node --save-dev
+
+
+
+INSTALL BODY-PARSER PARA TRATAR DOS OBJETOS VINDOS PELA REQUISIÇÃO
+
+npm i body-parser @types/body-parser
+
+////
+
+RUN
+
+npm run dev
+
+or 
+
+yarn dev
+
+
+/////
+
+
+BUILD
+
+npm run build
+
+or 
+
+yarn build
+
+//
+
+tsconfig.json
+
+
+{
+  "compilerOptions": {
+    "target": "es2017", 
+    "experimentalDecorators": true, 
+    "emitDecoratorMetadata": true, 
+    "module": "commonjs",
+    "rootDir": "./src", 
+    "outDir": "./dist", 
+    "removeComments": true, 
+    "esModuleInterop": true, 
+    "forceConsistentCasingInFileNames": true, 
+    "strict": true, 
+    "resolveJsonModule": true,
+    "skipLibCheck": true 
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+  ] 
+}
+
+
+npm init
+
+
+///////////
+
+
+Exemplo do arquivo package.json
+
+
+{
+  "devDependencies": {
+    "@types/node": "^17.0.25",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.3"
+  },
+  "name": "apinode",
+  "version": "1.0.0",
+  "description": "api base com sqlite3",
+  "main": "index.js",
+  "dependencies": {
+    "acorn": "^8.7.0",
+    "acorn-walk": "^8.2.0",
+    "anymatch": "^3.1.2",
+    "arg": "^4.1.3",
+    "binary-extensions": "^2.2.0",
+    "balanced-match": "^1.0.2",
+    "braces": "^3.0.2",
+    "brace-expansion": "^1.1.11",
+    "buffer-from": "^1.1.2",
+    "concat-map": "^0.0.1",
+    "chokidar": "^3.5.3",
+    "create-require": "^1.1.1",
+    "diff": "^4.0.2",
+    "dynamic-dedupe": "^0.3.0",
+    "fill-range": "^7.0.1",
+    "glob": "^7.2.0",
+    "function-bind": "^1.1.1",
+    "fs.realpath": "^1.0.0",
+    "glob-parent": "^5.1.2",
+    "inflight": "^1.0.6",
+    "has": "^1.0.3",
+    "inherits": "^2.0.4",
+    "is-core-module": "^2.9.0",
+    "is-binary-path": "^2.1.0",
+    "is-glob": "^4.0.3",
+    "is-extglob": "^2.1.1",
+    "minimatch": "^3.1.2",
+    "is-number": "^7.0.0",
+    "minimist": "^1.2.6",
+    "make-error": "^1.3.6",
+    "mkdirp": "^1.0.4",
+    "once": "^1.4.0",
+    "normalize-path": "^3.0.0",
+    "path-is-absolute": "^1.0.1",
+    "picomatch": "^2.3.1",
+    "path-parse": "^1.0.7",
+    "readdirp": "^3.6.0",
+    "rimraf": "^2.7.1",
+    "resolve": "^1.22.0",
+    "source-map": "^0.6.1",
+    "source-map-support": "^0.5.21",
+    "strip-json-comments": "^2.0.1",
+    "supports-preserve-symlinks-flag": "^1.0.0",
+    "to-regex-range": "^5.0.1",
+    "strip-bom": "^3.0.0",
+    "tree-kill": "^1.2.2",
+    "tsconfig": "^7.0.0",
+    "v8-compile-cache-lib": "^3.0.1",
+    "wrappy": "^1.0.2",
+    "xtend": "^4.0.2",
+    "yn": "^3.1.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts"
+  },
+  "author": "john bueno",
+  "license": "ISC"
+}
+
+
+////////
+
+RUN
+
+npm run dev
+
+/////
+
+npm i express @types/express
+
+///
+
+
+SQLITE3   DB browser  
+
+select * from product
+
+///
+
+npm i sqlite3 @types/sqlite3
+
+///
+////Facilita pegar os valores do arquivo .env e jogar para dentro da applicação
+
+npm i dotenv @types/dotenv
+
+///
+
+npm i @types/cors
+
+npm install cors
+npm install --save-dev @types/cors
+
+npm install cors
+npm install @types/cors
+
+add no arquivo index.ts ou server.ts quando cria o app com express
+
+import cors from 'cors'
+
+
+// Cors
+app.use(cors({
+    origin: ['http://localhost:3000']
+}))   // passando a url de acesso destino de consumo transação de dados
+
+
+
+//////
+
+
+// JSON
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+
+////
+
+
+
+SCRIPT DE BANCO
+
+
+
+
+INSERT INTO product VALUES (null, 'Fred', 'Flinstone', 10.0);
+INSERT INTO product VALUES (null, 'Barney', 'Rubble', 10.0);
